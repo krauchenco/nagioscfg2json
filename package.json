@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krauchenco/nagioscfg2json"
+    "url": "git://github.com/krauchenco/nagioscfg2json.git"
   },
   "keywords": [
     "Nagios",
