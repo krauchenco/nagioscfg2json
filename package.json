@@ -1,6 +1,6 @@
 {
   "name": "nagioscfg2json",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parser Nagios configuration file (cfg) to json format",
   "main": "teste.js",
   "scripts": {
