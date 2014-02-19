@@ -2,7 +2,7 @@
   "name": "nagioscfg2json",
   "version": "0.0.0",
   "description": "Parser Nagios configuration file (cfg) to json format",
-  "main": "index.js",
+  "main": "teste.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
