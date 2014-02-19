@@ -1,5 +1,3 @@
-nagioscfg2json
-==============
 # cfg Nagios configuration file to json
 ## Example
 ### CFG File (localhost_nagios2.cfg)
