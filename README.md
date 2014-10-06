@@ -1,6 +1,12 @@
-# cfg Nagios configuration file to json
-## Example
-### CFG File (localhost_nagios2.cfg)
+# Nagios Object Configuration to JSON Parser
+
+Nagioscfg2json turns Nagios Object Configuration files into
+Javascript Objects.
+
+## Usage
+
+Given a configuration-file `localhost_nagios2.cfg` such as: 
+
 ```
 define hostgroup {
         hostgroup_name       NagiosServer
@@ -31,7 +37,10 @@ define command {
         command_line    /usr/lib/nagios/plugins/check_http -H $HOSTADDRESS$ -C $ARG1$
 }
 ```
-### Code to use this tool
+
+Our `app.js` may look like this:
+
+
 ```
 var nagioscfg2json = require('nagioscfg2json');
 nagioscfg2json.parse('localhost_nagios2.cfg', function (err, json){
@@ -42,8 +51,13 @@ nagioscfg2json.parse('localhost_nagios2.cfg', function (err, json){
 	JSON.stringify(json, null, 4);
 });
 ```
-### Prints
+Running our `app.js` from the commandline would result in the following output on STDOUT:
+
+```shell
+ $> node app.js
 ```
+
+```javascript
 { hostgroup: [ { hostgroup_name: 'NagiosServer', alias: 'NagiosServer' } ],
   servicegroup:
    [ { servicegroup_name: 'InfraDigitalServerGroup',
@@ -65,10 +79,15 @@ nagioscfg2json.parse('localhost_nagios2.cfg', function (err, json){
        command_line: '/usr/lib/nagios/plugins/check_http -H $HOSTADDRESS$ -C $ARG1$' } ] }
 ```
 
-## Install
+This (though with a much larger output) also works on Nagios' objects.cache file.
+
+## Installation
+
 Use npm
 ```
-nm install nagioscfg2json
+npm install nagioscfg2json
 ```
 
-## License MIT
+# License 
+
+MIT
