@@ -1,25 +1,29 @@
 {
   "name": "nagioscfg2json",
-  "version": "0.0.1",
-  "description": "Parser Nagios configuration file (cfg) to json format",
-  "main": "teste.js",
+  "version": "0.0.2",
+  "description": "A Nagios Object Configuration to JSON parser",
+  "main": "nagioscfg2json.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/krauchenco/nagioscfg2json.git"
   },
+  "bugs": {
+    "url": "https://github.com/krauchenco/nagioscfg2json/issues"
+  },
   "keywords": [
-    "Nagios",
-    "cfg",
+    "nagios",
+    "config",
     "parser",
     "json"
   ],
   "dependencies": {},
   "author": "João Krauchenco Neto <krauchenco@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/krauchenco/nagioscfg2json/issues"
-  }
+  "contributors": [{
+  	"name": "Andreas Marschke",
+	"email": "andreas.marschke@gmail.com"
+  }],
+  "license": "MIT"
 }
