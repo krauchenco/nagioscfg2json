@@ -85,7 +85,7 @@ This (though with a much larger output) also works on Nagios' objects.cache file
 
 Use npm
 ```
-nm install nagioscfg2json
+npm install nagioscfg2json
 ```
 
 # License 
