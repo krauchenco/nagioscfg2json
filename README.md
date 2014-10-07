@@ -43,7 +43,7 @@ Our `app.js` may look like this:
 
 ```
 var nagioscfg2json = require('nagioscfg2json');
-nagioscfg2json.parse('localhost_nagios2.cfg', function (err, json){
+nagioscfg2json.fromFile('localhost_nagios2.cfg', function (err, json){
     if (err) {
 		console.log(err);
 		return;
@@ -80,6 +80,27 @@ Running our `app.js` from the commandline would result in the following output o
 ```
 
 This (though with a much larger output) also works on Nagios' objects.cache file.
+
+## API
+
+### parse(data, next)
+
+- Parameters:
+  - data: String of Nagios Object Configuration Text
+  - next: callback called upon parsing completion
+
+The callback will recieve following arguments:
+
+ - cfg : a Javascript Plain Object containing parsed configuration data
+
+### fromFile(filename,next)
+
+Convenience Method opening and reading configuration from a file and then
+turn it into a Plain Object.
+
+- Parameters:
+ - filename: File to read and subsequently parse
+ - next: callback function passed internally to parse method
 
 ## Installation
 
