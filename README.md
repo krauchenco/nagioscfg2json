@@ -48,7 +48,7 @@ nagioscfg2json.fromFile('localhost_nagios2.cfg', function (err, json){
 		console.log(err);
 		return;
 	}
-	JSON.stringify(json, null, 4);
+	console.log(JSON.stringify(json, null, 4));
 });
 ```
 Running our `app.js` from the commandline would result in the following output on STDOUT:
