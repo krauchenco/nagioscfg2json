@@ -5,5 +5,6 @@ nagioscfg2json.fromFile('./localhost_nagios2.cfg', function (err, json){
 		console.log(err);
 		return;
 	}
-	JSON.stringify(json, null, 4);
+	json = JSON.stringify(json, null, 4);
+  console.log(json);
 });
